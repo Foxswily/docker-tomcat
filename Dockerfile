@@ -1,8 +1,9 @@
-FROM dockerfile/java
+FROM dockerfile/java:oracle-java7
 MAINTAINER Ryan "shiymail@gmail.com"
 RUN apt-get -qq update
 RUN mkdir /www
-COPY ./apache-tomcat-7.0.57.tar.gz /www/tomcat7.tar.gz
+#COPY ./apache-tomcat-7.0.57.tar.gz /www/tomcat7.tar.gz
+RUN -O /www/tomcat7.tar.gz http://apache.stu.edu.tw/tomcat/tomcat-7/v7.0.57/bin/apache-tomcat-7.0.57.tar.gz
 RUN (   cd /www && \
 	tar zxf /www/tomcat7.tar.gz && \
 	mv /www/apache-tomcat* /www/tomcat && \

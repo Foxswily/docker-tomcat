@@ -1,5 +1,6 @@
 docker-tomcat
 =============
+dep:oracle-java7
 
 # Usage
 
